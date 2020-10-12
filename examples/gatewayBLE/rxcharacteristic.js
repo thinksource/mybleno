@@ -4,7 +4,7 @@
 var util = require('util');
 var bleno = require('../..');
 var os = require('os');
-
+var mutils = require('./myutils');
 
 var BlenoCharacteristic = bleno.Characteristic;
 
@@ -40,7 +40,7 @@ function createAndAppend(filename, charset){
 
 var RXCharacteristic = function () {
     RXCharacteristic.super_.call(this, {
-        uuid: '6E400003B5A3F393E0A9E50E24DCCA9E',
+        uuid: mutils.device_id,
         properties: ['write', 'writeWithoutResponse'],
         value: null
     });
