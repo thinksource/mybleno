@@ -57,11 +57,13 @@ var connectDate;
 
 RXCharacteristic.prototype.onWriteRequest = function (data, offset, withoutResponse, callback) {
     this._value = data;
+    console.log(data)
     resArray.push(data);
     callback(this.RESULT_SUCCESS);
 };
 
 function getBeanName(peripheral) {
+    console.log(peripheral);
     return parseInt(peripheral.substring(15, 17), 16);//
 }
 
