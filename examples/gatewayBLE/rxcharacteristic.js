@@ -10,7 +10,7 @@ var BlenoCharacteristic = bleno.Characteristic;
 
 var bs_name = os.hostname();
 console.log("bs_name: " + bs_name);
-
+console.log("uuid:", mutils.device_id);
 var mqtt = require('mqtt');
 
 // connect to the message server
