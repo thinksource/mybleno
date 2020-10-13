@@ -57,7 +57,7 @@ var connectDate;
 
 RXCharacteristic.prototype.onWriteRequest = function (data, offset, withoutResponse, callback) {
     this._value = data;
-    console.log(data)
+    console.log(data);
     resArray.push(data);
     callback(this.RESULT_SUCCESS);
 };

@@ -15,7 +15,7 @@ bleno.on('stateChange', function(state) {
   console.log('on -> stateChange: ' + state);
 
   if (state === 'poweredOn') {
-    bleno.startAdvertising(myutils.hostname, [myutils.device_id]);
+    bleno.startAdvertising(mutils.hostname, [mutils.device_id]);
   } else {
     bleno.stopAdvertising();
   }
@@ -29,7 +29,7 @@ bleno.on('advertisingStart', function(error) {
   if (!error) {
     bleno.setServices([
       new BlenoPrimaryService({
-	uuid: mytils.device_id,
+	uuid: mutils.device_id,
 	characteristics: [
 	  receiveHandler //new RXCharacteristic() //, new TXCharacteristic()
 	]
