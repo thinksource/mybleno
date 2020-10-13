@@ -10,7 +10,8 @@ var RXCharacteristic = require('./rxcharacteristic');
 
 
 console.log('bleno - echo');
-
+console.log("bs_name: " + mutils.hostname);
+console.log("uuid:", mutils.device_id);
 bleno.on('stateChange', function(state) {
   console.log('on -> stateChange: ' + state);
 
